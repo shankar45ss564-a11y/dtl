@@ -1,0 +1,232 @@
+/* Additional component styles - no @apply with custom classes */
+
+/* Uber-style buttons */
+.btn-uber {
+  background-color: white;
+  color: black;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-uber:hover {
+  background-color: #e5e5e5;
+  transform: scale(1.02);
+}
+
+.btn-uber-dark {
+  background-color: #0D0D0D;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+  border: 1px solid #333;
+}
+
+.btn-uber-dark:hover {
+  background-color: #1A1A1A;
+  transform: scale(1.02);
+}
+
+.btn-uber-green {
+  background-color: #06C167;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.btn-uber-green:hover {
+  background-color: #05A858;
+  transform: scale(1.02);
+}
+
+/* Input styles */
+.input-uber {
+  width: 100%;
+  background-color: #1A1A1A;
+  border: 1px solid #333;
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  color: white;
+  transition: border-color 0.2s ease;
+}
+
+.input-uber::placeholder {
+  color: #666;
+}
+
+.input-uber:focus {
+  outline: none;
+  border-color: white;
+}
+
+/* Ride card */
+.ride-card {
+  background-color: #1A1A1A;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  border: 1px solid #333;
+  transition: all 0.2s ease;
+}
+
+.ride-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Status badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.status-active {
+  background-color: rgba(6, 193, 103, 0.2);
+  color: #06C167;
+}
+
+.status-requested {
+  background-color: rgba(234, 179, 8, 0.2);
+  color: #EAB308;
+}
+
+.status-accepted {
+  background-color: rgba(59, 130, 246, 0.2);
+  color: #3B82F6;
+}
+
+.status-completed {
+  background-color: rgba(107, 114, 128, 0.2);
+  color: #9CA3AF;
+}
+
+.status-rejected {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #F87171;
+}
+
+.status-ongoing {
+  background-color: rgba(168, 85, 247, 0.2);
+  color: #A855F7;
+}
+
+/* Chat styles */
+.chat-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.chat-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.chat-message {
+  max-width: 80%;
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  word-wrap: break-word;
+}
+
+.chat-message-own {
+  align-self: flex-end;
+  background-color: #06C167;
+  color: white;
+  border-bottom-right-radius: 0.25rem;
+}
+
+.chat-message-other {
+  align-self: flex-start;
+  background-color: #333;
+  color: white;
+  border-bottom-left-radius: 0.25rem;
+}
+
+.chat-input-container {
+  padding: 1rem;
+  border-top: 1px solid #333;
+  background-color: #0D0D0D;
+}
+
+/* PIN display */
+.pin-display {
+  font-family: 'Courier New', monospace;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  color: #06C167;
+  background-color: rgba(6, 193, 103, 0.1);
+  border: 2px dashed #06C167;
+  border-radius: 0.5rem;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.pin-input {
+  font-family: 'Courier New', monospace;
+  font-size: 1.5rem;
+  font-weight: bold;
+  letter-spacing: 0.5rem;
+  text-align: center;
+}
+
+/* Navigation */
+.nav-link {
+  color: #9CA3AF;
+  transition: color 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-link:hover {
+  color: white;
+}
+
+.nav-link.active {
+  color: white;
+}
+
+/* Map-style decorative element */
+.map-decoration {
+  background: 
+    linear-gradient(90deg, transparent 49.5%, #333 49.5%, #333 50.5%, transparent 50.5%),
+    linear-gradient(transparent 49.5%, #333 49.5%, #333 50.5%, transparent 50.5%);
+  background-size: 40px 40px;
+  opacity: 0.3;
+}
+
+/* Card hover effect */
+.card-hover {
+  transition: all 0.2s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+/* Loading skeleton */
+.skeleton {
+  background: linear-gradient(90deg, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
